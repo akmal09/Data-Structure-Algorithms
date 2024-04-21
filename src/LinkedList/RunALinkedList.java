@@ -23,5 +23,23 @@ public class RunALinkedList {
 
         list.insertAtEnd(33);
         list.printList();
+
+        list.removeCurrentHead();
+        list.printList();
+
+        list.removeCurrentHead();
+        list.printList();
+
+        list.removeNode(2);
+        list.printList();
+
+        list.removeNode(212);
+        list.printList();
+
+        list.removeTail();
+        list.printList();
+
+        list.removeTail();
+        list.printList();
     }
 }
