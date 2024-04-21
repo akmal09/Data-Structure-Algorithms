@@ -11,7 +11,7 @@ public class RunALinkedList {
         list.insertAtBeginning(10);
         list.printList();
 
-        System.out.println("out lala");
+        System.out.println("tes");
         list.insertAfter(3,5);
         list.printList();
 
