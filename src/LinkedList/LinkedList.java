@@ -12,6 +12,35 @@ public class LinkedList {
         head = newNode;
     }
 
+    public void insertAfter(int prevNode, int val){
+        Node node = head;
+        while(node != null){
+            if(node.val== prevNode){
+                Node newNode = new Node(val);
+                Node tempNode = node;
+                newNode.next = node.next;
+                tempNode.next = newNode;
+                return;
+            }else{
+                node = node.next;
+            }
+        }
+
+    }
+
+    public void insertAtEnd(int val){
+        Node node = head;
+        while(node != null){
+            if(node.next == null){
+                Node newNode = new Node(val);
+                node.next = newNode;
+                return;
+            }else{
+                node = node.next;
+            }
+        }
+    }
+
     public void printList(){
         Node node = head;
         Integer i = 0;
