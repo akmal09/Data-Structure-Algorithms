@@ -1,10 +1,12 @@
 import LinkedList.RunALinkedList;
+import Queue.Queue;
 import Stack.Stack;
 
 public class Main {
     public static void main(String[] args) {
 //        linkedList();
-        stack();
+//        stack();
+        queue();
     }
 
     public static void linkedList(){
@@ -24,6 +26,37 @@ public class Main {
         stack.pop();
         System.out.println("AFTER POPPING");
         stack.printStack();
+        System.out.println();
+    }
+
+    public static void queue(){
+        Queue queue = new Queue();
+        queue.enqueue(4);
+        queue.printQueue(queue.front);
+        System.out.println();
+
+        queue.enqueue(3);
+        queue.printQueue(queue.front);
+        System.out.println();
+
+        queue.enqueue(2);
+        queue.printQueue(queue.front);
+        System.out.println();
+
+        queue.enqueue(1);
+        queue.printQueue(queue.front);
+        System.out.println();
+
+        queue.dequeue();
+        queue.printQueue(queue.front);
+        System.out.println();
+
+        queue.dequeue();
+        queue.printQueue(queue.front);
+        System.out.println();
+
+        queue.dequeue();
+        queue.printQueue(queue.front);
         System.out.println();
     }
 }
