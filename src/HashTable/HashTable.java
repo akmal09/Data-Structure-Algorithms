@@ -33,4 +33,17 @@ public class HashTable<K, V> {
     private int hash(K key){
         return Integer.parseInt(key.toString())%capacity;
     }
+
+    public String searchData(int key, String name){
+        int index = key%capacity;
+        NodeHt node = this.column[index].head;
+        while (node != null){
+            if(node.data.getKey().equals(key) && node.data.getValue().equals(name)){
+                return node.data.getValue() + " is " + node.data.getKey() +" old. This data is at index " +index;
+            }
+            node = node.next;
+        }
+
+        return "data is not found";
+    }
 }

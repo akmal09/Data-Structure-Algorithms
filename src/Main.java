@@ -77,23 +77,19 @@ public class Main {
         hashTable.put(83, "ara");
         hashTable.put(74, "ina");
         hashTable.put(64, "ida");
-
         hashTable.put(25, "eki");
         hashTable.put(65, "iva");
-
         hashTable.put(56, "ali");
-
         hashTable.put(78, "ivan");
         hashTable.put(48, "lea");
         hashTable.put(38, "agus");
         hashTable.put(38, "ira");
-
         hashTable.put(59, "eri");
         hashTable.put(89, "dani");
-
-
-
-
         hashTable.printHashTable();
+
+        System.out.println();
+        System.out.println(hashTable.searchData(89, "dani"));
+        System.out.println(hashTable.searchData(50, "ika"));
     }
 }
