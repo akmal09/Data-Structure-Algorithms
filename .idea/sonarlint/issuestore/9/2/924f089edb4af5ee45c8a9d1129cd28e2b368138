@@ -1,21 +1,22 @@
 
 ]
-java:S1220""Move this file to a named package.8òê‹ïñ1J$52e46eff-b183-4c83-9803-035e00b7e896
-~	java:S125"<This block of commented-out lines of code should be removed.(îÀ˜ë8ıê‹ïñ1J$97e037fe-6fc7-44dc-ac5b-99771eb59865
+java:S1220""Move this file to a named package.8›«Ùïñ1J$665b2f99-6715-4557-b67f-7ab1030d005e
+~	java:S125"<This block of commented-out lines of code should be removed.(îÀ˜ë8¥«Ùïñ1J$86f7c78d-4eb1-436b-a998-7197c5688116
 v
-java:S2440".Remove this instantiation of "RunALinkedList".(ó£¥¾ıÿÿÿÿ8€ë‹ïñ1J$67abe64b-930d-4de8-b0bb-368eee4a9db3
+java:S2440".Remove this instantiation of "RunALinkedList".(ó£¥¾ıÿÿÿÿ8¦«Ùïñ1J$a0840901-a517-459a-aab0-ee97c32954bc
 x
-java:S2209"5Change this instance-reference to a static reference.(üÎ†¼8ë‹ïñ1J$d44c384f-47f6-4b3f-b2eb-1a220ea0d372
-r	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ƒë‹ïñ1J$f1ac3acc-1603-459e-a33e-19a2de15c919
-r	java:S106"+Replace this use of System.out by a logger.(œá™¤úÿÿÿÿ8„ë‹ïñ1J$f2c09941-8358-49f9-a14c-ba25eff2ffc3
-r	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8„ë‹ïñ1J$c2b8c779-0023-468d-a56b-0fb5aae7aafc
-r	java:S106&"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8…ë‹ïñ1J$f9fb3efd-ab88-4126-8a9a-5ce204b67a69
-r	java:S106*"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8…ë‹ïñ1J$6272e1fd-b6fb-4e32-8f21-d4517b65262f
-r	java:S106."+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8…ë‹ïñ1J$af3204da-8ddd-42fb-adab-c7a4a6173dc7
-r	java:S1062"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8†ë‹ïñ1J$81e408c6-4188-4f95-bbcc-2199e9850413
-r	java:S1066"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8†ë‹ïñ1J$3682e9ad-26e7-44af-b19a-5ba3a10d47b5
-r	java:S106:"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8†ë‹ïñ1J$971b8d09-ad74-48ba-8e6c-a43e1912eeff
-r	java:S106>"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8†ë‹ïñ1J$6aec02fe-c886-4ce9-8961-072af8a51be7
-r	java:S106["+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8Œë‹ïñ1J$f19ab304-5c49-4a23-a600-e87b1f44f1d6
-r	java:S106\"+Replace this use of System.out by a logger.(æ™íúÿÿÿÿ8Œë‹ïñ1J$4c742659-7291-4008-8118-cda04466ab4b
-m	java:S106]"+Replace this use of System.out by a logger.(í»×”8Ë­ïñ1J$da959248-209f-46b2-94d2-35a3ca60ca54
+java:S2209"5Change this instance-reference to a static reference.(üÎ†¼8¨«Ùïñ1J$575e78b5-6afb-4597-99fd-2f1dfec67418
+r	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8««Ùïñ1J$d6b7a809-3cc9-47b4-8955-eea8f28740a4
+r	java:S106"+Replace this use of System.out by a logger.(œá™¤úÿÿÿÿ8««Ùïñ1J$c94cbe9b-c6f1-49e7-8b3c-247977251b90
+r	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8««Ùïñ1J$2dd5f404-a356-47f8-91a8-7973590b9b97
+r	java:S106&"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8®«Ùïñ1J$7838ba4d-b2e3-493b-912c-ba15502dee7a
+r	java:S106*"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8®«Ùïñ1J$a1cf5fe6-297c-4d83-ae9c-24395f639822
+r	java:S106."+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8®«Ùïñ1J$6f206b7f-8853-4053-860a-870602a25ae5
+r	java:S1062"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8¯«Ùïñ1J$b35051a9-e84c-47fc-a9bb-5057bb088eca
+r	java:S1066"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8¯«Ùïñ1J$e66ba581-6873-4ec3-a00f-4864e7d0d3b0
+r	java:S106:"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8¯«Ùïñ1J$9ac40ff8-9e10-44e2-9cca-f417ba9c6823
+r	java:S106>"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8¯«Ùïñ1J$c1cff5ab-ff0f-4a0a-b7cd-48297aa5e3ac
+r	java:S106["+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8²«Ùïñ1J$bad074b1-127a-4618-bb7e-13d21839c5b4
+r	java:S106\"+Replace this use of System.out by a logger.(æ™íúÿÿÿÿ8²«Ùïñ1J$930d984d-a169-4bc5-bbbc-e4a038d47b2e
+m	java:S106]"+Replace this use of System.out by a logger.(í»×”8³«Ùïñ1J$f95ed236-b8ad-4457-a243-ed68d3318372
+r	java:S106`"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ßëÚïñ1J$9b2366e7-e390-4cbb-a1b4-4c20000387cc

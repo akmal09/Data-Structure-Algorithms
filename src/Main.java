@@ -91,5 +91,15 @@ public class Main {
         System.out.println();
         System.out.println(hashTable.searchData(89, "dani"));
         System.out.println(hashTable.searchData(50, "ika"));
+
+
+        System.out.println();
+        hashTable.removeData(89, "dani");
+        hashTable.removeData(48, "lea");
+        hashTable.removeData(62, "eko");
+        hashTable.removeData(12, "ika");
+
+        hashTable.printHashTable();
+
     }
 }

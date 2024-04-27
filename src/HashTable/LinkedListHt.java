@@ -21,6 +21,32 @@ public class LinkedListHt<K, V> {
         }
     }
 
+    public void removeData(int key, String value){
+        NodeHt prevNode;
+        NodeHt node = prevNode = this.head;
+        while (node != null){
+            if(this.head.data.getKey().equals(key) && this.head.data.getValue().equals(value)){
+                if(this.head.next != null){
+                    this.head = this.head.next;
+                }else{
+                    this.head = null;
+                }
+            }
+
+            if(node.data.getKey().equals(key) && node.data.getValue().equals(value)){
+                if(node.next!= null){
+                    NodeHt newNode = node.next;
+                    prevNode.next = newNode;
+                    break;
+                }else{
+                    prevNode.next = null;
+                }
+            }
+            prevNode = node;
+            node = node.next;
+        }
+    }
+
     public void printLinkedList(){
         NodeHt node = head;
         int i=0;

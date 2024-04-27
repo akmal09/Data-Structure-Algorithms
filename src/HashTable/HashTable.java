@@ -46,4 +46,9 @@ public class HashTable<K, V> {
 
         return "data is not found";
     }
+
+    public void removeData(int key, String value){
+        int index = key%this.capacity;
+        this.column[index].removeData(key,value);
+    }
 }
