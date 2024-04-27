@@ -1,8 +1,18 @@
 
 ]
-java:S1220""Move this file to a named package.8¯·ï1J$fe8c55bf-6b5f-41a8-9a80-76835e04bec4
+java:S1220""Move this file to a named package.8ÕÃÀ×ñ1J$e3540b7a-8088-4ad2-87b1-92ca2ebe4ac9
+~	java:S125"<This block of commented-out lines of code should be removed.(îÀ˜ë8ßÃÀ×ñ1J$ea753d6e-c743-4049-bb7e-16c57c1af00b
 v
-java:S2440	".Remove this instantiation of "RunALinkedList".(ó£¥¾ıÿÿÿÿ8”ã·ï1J$91c3687e-b246-47fa-8dea-a715730f5f87
+java:S2440".Remove this instantiation of "RunALinkedList".(ó£¥¾ıÿÿÿÿ8áÃÀ×ñ1J$4b7df5a4-46a7-4f9f-b76c-70c2dd2e4b5f
 x
-java:S2209
-"5Change this instance-reference to a static reference.(üÎ†¼8ƒ”ã·ï1J$861e63da-f506-4091-a1f7-0850cb9248a2
+java:S2209"5Change this instance-reference to a static reference.(üÎ†¼8ãÃÀ×ñ1J$49158bab-c8ca-4490-83d6-3989f139dabe
+r	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8æÃÀ×ñ1J$7284241c-846b-426a-9ba9-018bebb55412
+r	java:S106"+Replace this use of System.out by a logger.(œá™¤úÿÿÿÿ8æÃÀ×ñ1J$f03aa1c4-2275-4d2d-b0b5-dde57e457ade
+r	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8æÃÀ×ñ1J$c9a93ea6-d5c8-47b8-91e8-ffcd717a8938
+r	java:S106&"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8èÃÀ×ñ1J$d0334821-65ab-4acb-b431-eebffbc9748c
+r	java:S106*"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8èÃÀ×ñ1J$e95f66e9-5253-4c10-9c37-ead5a0dc18ad
+r	java:S106."+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8èÃÀ×ñ1J$bd48e415-5032-4218-9370-583400ffc36a
+r	java:S1062"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8éÃÀ×ñ1J$d411b867-dbb3-49ec-943f-938bd898ab65
+r	java:S1066"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8éÃÀ×ñ1J$ced88eaa-4b25-4099-9c21-26e37ed9d67b
+r	java:S106:"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8éÃÀ×ñ1J$418bd5fd-da0a-44f2-ada1-c6aec7abbb9d
+r	java:S106>"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8êÃÀ×ñ1J$e918e6bf-1c6d-43b0-8c15-a8b51c1bf8d2

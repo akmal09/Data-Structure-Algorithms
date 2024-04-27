@@ -1,11 +1,11 @@
 package HashTable;
 
-public class NodeHt<k, v> {
-    KeyValuePair<k, v> keyValuePair;
+public class NodeHt {
+    KeyValuePair data;
     public NodeHt next;
 
-    public NodeHt(KeyValuePair<k, v> pairNode){
-        this.keyValuePair = pairNode;
+    public NodeHt(KeyValuePair pairNode){
+        this.data = pairNode;
         this.next = null;
     }
 }

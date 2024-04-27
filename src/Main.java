@@ -1,3 +1,4 @@
+import HashTable.HashTable;
 import LinkedList.RunALinkedList;
 import Queue.Queue;
 import Stack.Stack;
@@ -6,7 +7,8 @@ public class Main {
     public static void main(String[] args) {
 //        linkedList();
 //        stack();
-        queue();
+//        queue();
+        hashTable();
     }
 
     public static void linkedList(){
@@ -58,5 +60,40 @@ public class Main {
         queue.dequeue();
         queue.printQueue(queue.front);
         System.out.println();
+    }
+
+    public static void hashTable(){
+        int capacity = 10;
+        HashTable<Object, Object> hashTable = new HashTable<>(capacity);
+
+        hashTable.put(60, "John");
+        hashTable.put(20, "Lala");
+        hashTable.put(10, "Lina");
+        hashTable.put(30, "kita");
+        hashTable.put(20, "aluca");
+        hashTable.put(62, "eko");
+        hashTable.put(12, "ika");
+        hashTable.put(83, "deo");
+        hashTable.put(83, "ara");
+        hashTable.put(74, "ina");
+        hashTable.put(64, "ida");
+
+        hashTable.put(25, "eki");
+        hashTable.put(65, "iva");
+
+        hashTable.put(56, "ali");
+
+        hashTable.put(78, "ivan");
+        hashTable.put(48, "lea");
+        hashTable.put(38, "agus");
+        hashTable.put(38, "ira");
+
+        hashTable.put(59, "eri");
+        hashTable.put(89, "dani");
+
+
+
+
+        hashTable.printHashTable();
     }
 }

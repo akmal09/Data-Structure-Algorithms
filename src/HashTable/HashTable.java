@@ -1,7 +1,5 @@
 package HashTable;
 
-import java.nio.file.Path;
-
 public class HashTable<K, V> {
     public LinkedListHt<K, V>[] column;
     public int capacity;
@@ -16,10 +14,23 @@ public class HashTable<K, V> {
 
     public void put(K key, V value){
         int index = hash(key);
-//        column[index].insertData();
+        KeyValuePair keyValuePair = new KeyValuePair<>(key, value);
+        NodeHt newNode = new NodeHt(keyValuePair);
+        this.column[index].insertData(newNode);
+    }
+
+    public void printHashTable(){
+        for(int i=0; i<this.capacity; i++){
+            if(this.column[i].head == null){
+                System.out.print("[]");
+            }else{
+                this.column[i].printLinkedList();
+            }
+            System.out.println();
+        }
     }
 
     private int hash(K key){
-        return Math.abs(key.hashCode())%capacity;
+        return Integer.parseInt(key.toString())%capacity;
     }
 }
