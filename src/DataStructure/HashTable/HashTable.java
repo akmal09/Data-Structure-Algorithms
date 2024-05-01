@@ -1,4 +1,4 @@
-package HashTable;
+package DataStructure.HashTable;
 
 public class HashTable<K, V> {
     public LinkedListHt<K, V>[] column;

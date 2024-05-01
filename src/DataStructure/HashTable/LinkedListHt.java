@@ -1,6 +1,4 @@
-package HashTable;
-
-import LinkedList.Node;
+package DataStructure.HashTable;
 
 public class LinkedListHt<K, V> {
     public NodeHt head;

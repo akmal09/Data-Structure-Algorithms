@@ -1,14 +1,16 @@
-import HashTable.HashTable;
-import LinkedList.RunALinkedList;
-import Queue.Queue;
-import Stack.Stack;
+import DataStructure.HashTable.HashTable;
+import DataStructure.LinkedList.RunALinkedList;
+import DataStructure.Queue.Queue;
+import DataStructure.Stack.Stack;
+import SortingAlgorithm.BubbleSort;
 
 public class Main {
     public static void main(String[] args) {
 //        linkedList();
 //        stack();
 //        queue();
-        hashTable();
+//        hashTable();
+        bubbleSort();
     }
 
     public static void linkedList(){
@@ -101,5 +103,10 @@ public class Main {
 
         hashTable.printHashTable();
 
+    }
+
+    public static void bubbleSort(){
+        BubbleSort bubbleSort = new BubbleSort();
+        bubbleSort.sortArrayAscending();
     }
 }

@@ -1,4 +1,4 @@
-package Stack;
+package DataStructure.Stack;
 
 public class Stack {
     private Node top;

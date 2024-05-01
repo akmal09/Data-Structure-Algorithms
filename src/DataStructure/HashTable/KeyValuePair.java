@@ -1,4 +1,4 @@
-package HashTable;
+package DataStructure.HashTable;
 
 public class KeyValuePair<k, v> {
     private k key;

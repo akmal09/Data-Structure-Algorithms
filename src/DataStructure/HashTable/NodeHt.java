@@ -1,4 +1,4 @@
-package HashTable;
+package DataStructure.HashTable;
 
 public class NodeHt {
     KeyValuePair data;
