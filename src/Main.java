@@ -107,6 +107,7 @@ public class Main {
 
     public static void bubbleSort(){
         BubbleSort bubbleSort = new BubbleSort();
-        bubbleSort.sortArrayAscending();
+//        bubbleSort.sortArrayAscending();
+        bubbleSort.sortArrayDescending();
     }
 }

@@ -1,22 +1,23 @@
 
 ]
-java:S1220""Move this file to a named package.8çÎÛ“ó1J$64977da1-69af-41f5-bc56-4388a332dd58
-~	java:S125	"<This block of commented-out lines of code should be removed.(îÀ˜ë8ùÎÛ“ó1J$23c20970-6399-42af-9aa3-0e1436b09d21
+java:S1220""Move this file to a named package.8çÎÛ“ó1J$34c1e678-cd27-420a-ac9a-50c11ee2eddd
+~	java:S125	"<This block of commented-out lines of code should be removed.(îÀ˜ë8ùÎÛ“ó1J$9813de6a-30de-46d2-bfc0-fd9887589bc9
 v
-java:S2440".Remove this instantiation of "RunALinkedList".(ó£¥¾ıÿÿÿÿ8úÎÛ“ó1J$2ec8f9a0-8b8b-4d38-b4d8-b24a935093e4
+java:S2440".Remove this instantiation of "RunALinkedList".(ó£¥¾ıÿÿÿÿ8úÎÛ“ó1J$48962093-597f-4afe-a6e2-8d097821a040
 x
-java:S2209"5Change this instance-reference to a static reference.(üÎ†¼8üÎÛ“ó1J$e7d859e3-2d7c-4007-aea2-d18b5d8014a1
-r	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ÏÛ“ó1J$dbb877ae-cd3f-4a30-b2a4-8b668c632522
-r	java:S106"+Replace this use of System.out by a logger.(œá™¤úÿÿÿÿ8‚ÏÛ“ó1J$439a80dd-55ec-44e4-967c-5394559ee321
-r	java:S106!"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ƒÏÛ“ó1J$9dac9b35-dc88-45a1-91b1-2040f9e3a96e
-r	java:S106("+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8…ÏÛ“ó1J$1c6257f6-16a6-42cc-8a78-0bc77572c3c4
-r	java:S106,"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8†ÏÛ“ó1J$ca8502fc-b248-4274-95c1-2cb295aea934
-r	java:S1060"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8‡ÏÛ“ó1J$f16d75bd-de30-4831-baf9-43407dc6e589
-r	java:S1064"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8‡ÏÛ“ó1J$7002c781-8575-43e7-8b71-174f8c9f24a8
-r	java:S1068"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ˆÏÛ“ó1J$17665797-b73c-4849-806e-627ead0db50e
-r	java:S106<"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ŠÏÛ“ó1J$0d194c56-5dfc-4ff7-8a2d-cbd13405df2f
-r	java:S106@"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ŠÏÛ“ó1J$f09f6002-6a0d-4d52-8733-ff1348434313
-r	java:S106]"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8”ÏÛ“ó1J$2161dcdd-d60c-458a-9f44-85e793bd62cc
-r	java:S106^"+Replace this use of System.out by a logger.(æ™íúÿÿÿÿ8”ÏÛ“ó1J$cb1146ec-87d4-4108-8c6b-792da99562a5
-m	java:S106_"+Replace this use of System.out by a logger.(í»×”8•ÏÛ“ó1J$bdc27f1d-2431-4a72-8b90-a9b51a85cb5e
-r	java:S106b"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8•ÏÛ“ó1J$12d38cda-6148-48f1-b279-1a0b4acc9b1e
+java:S2209"5Change this instance-reference to a static reference.(üÎ†¼8üÎÛ“ó1J$b51e5794-d07a-470f-a98b-b66479804858
+r	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ÏÛ“ó1J$3212f44b-6624-451b-9582-4cd45ee99d35
+r	java:S106"+Replace this use of System.out by a logger.(œá™¤úÿÿÿÿ8‚ÏÛ“ó1J$716a0311-7742-48fd-b98a-d9348f681ffb
+r	java:S106!"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ƒÏÛ“ó1J$85c5aa73-e180-4991-84fd-ad9de5312aac
+r	java:S106("+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8…ÏÛ“ó1J$b853c5ce-453c-45a0-ac38-90a522783557
+r	java:S106,"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8†ÏÛ“ó1J$746da5be-5ccc-4d9e-9462-f354e815f643
+r	java:S1060"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8‡ÏÛ“ó1J$481c2517-2d31-4fc6-83bd-df8a5935b976
+r	java:S1064"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8‡ÏÛ“ó1J$ffd7af1d-9fa2-4312-be71-4cbf474b14e2
+r	java:S1068"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ˆÏÛ“ó1J$da453246-e137-47ff-81de-b8590d0cdf02
+r	java:S106<"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ŠÏÛ“ó1J$0d0e61c8-9676-4ca1-824c-5514c1461961
+r	java:S106@"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ŠÏÛ“ó1J$622e6d9f-c57d-40b3-a14a-5651fbe0d04f
+r	java:S106]"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8”ÏÛ“ó1J$a54d7f50-0d79-4e1b-b4a3-257ab4a811e4
+r	java:S106^"+Replace this use of System.out by a logger.(æ™íúÿÿÿÿ8”ÏÛ“ó1J$48d1a2c8-b32c-42e9-ab35-02fd140e587f
+m	java:S106_"+Replace this use of System.out by a logger.(í»×”8•ÏÛ“ó1J$2bed7e25-3903-4400-a601-cac98be8625b
+r	java:S106b"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8•ÏÛ“ó1J$d3d5cf51-34eb-44ce-b698-554414b4e127
+ƒ	java:S125n"<This block of commented-out lines of code should be removed.(Áí¯©ùÿÿÿÿ8„µÒ•ó1J$c6d69290-7da2-4ce0-b88b-2b4c6b50f14a
