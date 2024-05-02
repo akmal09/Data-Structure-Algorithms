@@ -3,6 +3,7 @@ import DataStructure.LinkedList.RunALinkedList;
 import DataStructure.Queue.Queue;
 import DataStructure.Stack.Stack;
 import SortingAlgorithm.BubbleSort;
+import SortingAlgorithm.InsertionSort;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +11,8 @@ public class Main {
 //        stack();
 //        queue();
 //        hashTable();
-        bubbleSort();
+//        bubbleSort();
+        insertionSort();
     }
 
     public static void linkedList(){
@@ -109,5 +111,11 @@ public class Main {
         BubbleSort bubbleSort = new BubbleSort();
 //        bubbleSort.sortArrayAscending();
         bubbleSort.sortArrayDescending();
+    }
+
+    public static void insertionSort(){
+        InsertionSort insertionSort = new InsertionSort();
+//        insertionSort.sortAscending();
+        insertionSort.sortDescending();
     }
 }
