@@ -126,10 +126,12 @@ public class Main {
 
     public static void mergeSort(){
         List<Integer> integerList = new ArrayList<>();
+        integerList.add(7);
+        integerList.add(8);
         integerList.add(5);
-        integerList.add(2);
         integerList.add(1);
         integerList.add(4);
+        integerList.add(2);
 
         MergeSort mergeSort = new MergeSort();
         System.out.println("before sorted->"+printArray(integerList));
