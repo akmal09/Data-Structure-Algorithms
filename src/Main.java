@@ -4,6 +4,10 @@ import DataStructure.Queue.Queue;
 import DataStructure.Stack.Stack;
 import SortingAlgorithm.BubbleSort;
 import SortingAlgorithm.InsertionSort;
+import SortingAlgorithm.MergeSort;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +16,8 @@ public class Main {
 //        queue();
 //        hashTable();
 //        bubbleSort();
-        insertionSort();
+//        insertionSort();
+        mergeSort();
     }
 
     public static void linkedList(){
@@ -117,5 +122,27 @@ public class Main {
         InsertionSort insertionSort = new InsertionSort();
 //        insertionSort.sortAscending();
         insertionSort.sortDescending();
+    }
+
+    public static void mergeSort(){
+        List<Integer> integerList = new ArrayList<>();
+        integerList.add(5);
+        integerList.add(2);
+        integerList.add(1);
+        integerList.add(4);
+
+        MergeSort mergeSort = new MergeSort();
+        System.out.println("before sorted->"+printArray(integerList));
+
+        System.out.println("after sorted->"+mergeSort.sort(integerList));
+
+    }
+
+    private static String printArray(List<Integer> arr) {
+        String output = "";
+        for (Integer num : arr) {
+            output = output+" "+Integer.toString(num);
+        }
+        return output;
     }
 }
