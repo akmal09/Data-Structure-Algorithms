@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MergeSort {
-    private int[] defaultArr = {2,3,1,4};
     public List<Integer> sort(List<Integer> arrayData){
         if(arrayData.size() == 1){
             return arrayData;
@@ -50,7 +49,6 @@ public class MergeSort {
         return sortedArray;
     }
 
-
     public List<Integer> splitArrayLeft(List<Integer> arrayList, int pivot){
         List<Integer> splittedArray = new ArrayList<>();
         for(int i=0; i<pivot; i++){
@@ -58,6 +56,7 @@ public class MergeSort {
         }
         return splittedArray;
     }
+
     public List<Integer> splitArrayRight(List<Integer> arrayList, int pivot){
         List<Integer> splittedArray = new ArrayList<>();
         for(int i=pivot; i<arrayList.size(); i++){
