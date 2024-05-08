@@ -5,6 +5,7 @@ import DataStructure.Stack.Stack;
 import SortingAlgorithm.BubbleSort;
 import SortingAlgorithm.InsertionSort;
 import SortingAlgorithm.MergeSort;
+import SortingAlgorithm.QuickSort;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,8 @@ public class Main {
 //        hashTable();
 //        bubbleSort();
 //        insertionSort();
-        mergeSort();
+//        mergeSort();
+        quickSort();
     }
 
     public static void linkedList(){
@@ -124,10 +126,11 @@ public class Main {
         insertionSort.sortDescending();
     }
 
-    public static void mergeSort(){
+    public static void quickSort(){
         List<Integer> integerList = new ArrayList<>();
-        integerList.add(5);
         integerList.add(2);
+        integerList.add(5);
+        integerList.add(3);
         integerList.add(1);
         integerList.add(4);
 
@@ -135,6 +138,19 @@ public class Main {
         System.out.println("before sorted->"+printArray(integerList));
 
         System.out.println("after sorted->"+mergeSort.sort(integerList));
+
+    }
+    public static void mergeSort(){
+        List<Integer> integerList = new ArrayList<>();
+        integerList.add(5);
+        integerList.add(2);
+        integerList.add(1);
+        integerList.add(4);
+
+        QuickSort quickSort = new QuickSort();
+        System.out.println("before sorted->"+printArray(integerList));
+
+        System.out.println("after sorted->"+quickSort.sort(integerList));
 
     }
 
