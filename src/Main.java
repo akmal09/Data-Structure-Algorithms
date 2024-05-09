@@ -7,6 +7,7 @@ import SortingAlgorithm.BubbleSort;
 import SortingAlgorithm.InsertionSort;
 import SortingAlgorithm.MergeSort;
 import SortingAlgorithm.QuickSort;
+import TreeDataStructure.BinaryTree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,8 @@ public class Main {
 //        insertionSort();
 //        mergeSort();
 //        quickSort();
-        binarySearch();
+//        binarySearch();
+        binaryTree();
     }
 
     public static void linkedList(){
@@ -169,6 +171,18 @@ public class Main {
             output = output+" "+Integer.toString(num);
         }
         return output;
+    }
+
+    private static void binaryTree(){
+        BinaryTree binaryTree = new BinaryTree(17);
+        binaryTree.insertTree(10, binaryTree.root);
+        binaryTree.insertTree(7, binaryTree.root);
+        binaryTree.insertTree(12, binaryTree.root);
+        binaryTree.insertTree(59, binaryTree.root);
+        binaryTree.insertTree(34, binaryTree.root);
+        binaryTree.insertTree(92, binaryTree.root);
+
+        binaryTree.inorderTraversalTree(binaryTree.root);
     }
     private static String printArray(int[] arr) {
         String output = "";
