@@ -182,8 +182,19 @@ public class Main {
         binaryTree.insertTree(34, binaryTree.root);
         binaryTree.insertTree(92, binaryTree.root);
 
+        System.out.print("inorder traversal ->[");
         binaryTree.inorderTraversalTree(binaryTree.root);
+        System.out.println("]");
+
+        System.out.print("preorder traversal ->[");
+        binaryTree.preorderTraversal(binaryTree.root);
+        System.out.println("]");
+
+        System.out.print("postorder traversal ->[");
+        binaryTree.postOrder(binaryTree.root);
+        System.out.println("]");
     }
+
     private static String printArray(int[] arr) {
         String output = "";
         for (int i=0; i<arr.length; i++) {
