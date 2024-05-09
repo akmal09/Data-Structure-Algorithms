@@ -2,6 +2,7 @@ import DataStructure.HashTable.HashTable;
 import DataStructure.LinkedList.RunALinkedList;
 import DataStructure.Queue.Queue;
 import DataStructure.Stack.Stack;
+import SearchAlgorithm.BinarySearch;
 import SortingAlgorithm.BubbleSort;
 import SortingAlgorithm.InsertionSort;
 import SortingAlgorithm.MergeSort;
@@ -19,7 +20,8 @@ public class Main {
 //        bubbleSort();
 //        insertionSort();
 //        mergeSort();
-        quickSort();
+//        quickSort();
+        binarySearch();
     }
 
     public static void linkedList(){
@@ -151,13 +153,27 @@ public class Main {
         System.out.println("before sorted->"+printArray(integerList));
 
         System.out.println("after sorted->"+quickSort.sort(integerList));
+    }
 
+    private static void binarySearch(){
+        BinarySearch binarySearch = new BinarySearch();
+        int findValue = 1;
+        System.out.println("this is the array ->"+printArray(binarySearch.array));
+        System.out.println("find "+Integer.toString(findValue)+" !!");
+        System.out.println(binarySearch.search(findValue, 0, binarySearch.array.length));
     }
 
     private static String printArray(List<Integer> arr) {
         String output = "";
         for (Integer num : arr) {
             output = output+" "+Integer.toString(num);
+        }
+        return output;
+    }
+    private static String printArray(int[] arr) {
+        String output = "";
+        for (int i=0; i<arr.length; i++) {
+            output = output+" "+Integer.toString(arr[i]);
         }
         return output;
     }
