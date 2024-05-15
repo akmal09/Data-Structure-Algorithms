@@ -2,6 +2,8 @@ package TreeDataStructure;
 
 import SearchAlgorithm.BinarySearch;
 
+import java.time.temporal.Temporal;
+
 public class BinaryTree {
     public TreeNode root;
 
@@ -43,5 +45,43 @@ public class BinaryTree {
             }
 
         }
+    }
+
+    public void remove(int val){
+//        System.out.println("output->"+this.root.getVal());
+        this.root = removeNodeByMe(val,this.root);
+        System.out.println("\noutput->"+this.root.getVal());
+//        this.root = removeNode(this.root,val);
+    }
+
+    private TreeNode removeNodeByMe(int val, TreeNode node){
+        if(node == null){
+            return node;
+        }
+
+        if(val<node.getVal()){
+            node.setLeft(removeNodeByMe(val, node.getLeft()));
+        }else if(val>node.getVal()){
+            node.setRight(removeNodeByMe(val, node.getRight()));
+        }else{
+            if(node.getRight() == null){
+                return node.getLeft();
+            }else if(node.getLeft() == null){
+                return node.getRight();
+            }
+
+            TreeNode successor = findMin(node.getRight());
+            node.setVal(successor.getVal());
+            node.setRight(removeNodeByMe(successor.getVal(), node.getRight()));
+        }
+
+        return node;
+    }
+
+    private TreeNode findMin(TreeNode node){
+        if(node.getLeft() != null){
+            return findMin(node.getLeft());
+        }
+        return node;
     }
 }

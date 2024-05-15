@@ -16,6 +16,10 @@ public class TreeNode {
         return val;
     }
 
+    public void setVal(int value){
+        this.val = value;
+    }
+
     public void setLeft(TreeNode data) {
         this.left = data;
     }

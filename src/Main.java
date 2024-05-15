@@ -8,6 +8,7 @@ import SortingAlgorithm.InsertionSort;
 import SortingAlgorithm.MergeSort;
 import SortingAlgorithm.QuickSort;
 import TreeDataStructure.BinaryTree;
+import TreeDataStructure.Graph.Graph;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,8 @@ public class Main {
 //        mergeSort();
 //        quickSort();
 //        binarySearch();
-        binaryTree();
+//        binaryTree();
+        graph();
     }
 
     public static void linkedList(){
@@ -183,6 +185,16 @@ public class Main {
         binaryTree.insertTree(92, binaryTree.root);
 
         binaryTree.inorderTraversalTree(binaryTree.root);
+
+        binaryTree.remove(59);
+        System.out.println();
+        binaryTree.inorderTraversalTree(binaryTree.root);
+    }
+
+    private static void graph(){
+        System.out.println("UNDIRECTED GRAPH:");
+        Graph undirectedGraph = new Graph();
+        undirectedGraph.runUndirectedGraph();
     }
     private static String printArray(int[] arr) {
         String output = "";
