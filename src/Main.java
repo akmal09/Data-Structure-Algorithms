@@ -200,8 +200,14 @@ public class Main {
 
     private static void graph(){
         System.out.println("UNDIRECTED GRAPH:");
-        Graph undirectedGraph = new Graph();
-        undirectedGraph.runUndirectedGraph();
+        Graph graph = new Graph();
+        graph.runUndirectedGraph();
+
+        System.out.println();
+        System.out.println();
+
+        System.out.println("DIRECTED GRAPH");
+        graph.runDirectedGraph();
     }
     private static String printArray(int[] arr) {
         String output = "";

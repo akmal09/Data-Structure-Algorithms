@@ -12,6 +12,14 @@ public class PersonDirected {
         this.followers = new ArrayList<>();
     }
 
+    public String getName(){
+        return this.name;
+    }
+
+    public List<PersonDirected> getFollowers(){
+        return this.followers;
+    }
+
     public void follow(PersonDirected person){
         this.followers.add(person);
     }

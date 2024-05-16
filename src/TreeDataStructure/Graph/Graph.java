@@ -26,7 +26,45 @@ public class Graph {
     }
 
     public void runDirectedGraph(){
+        PersonDirected alice = new PersonDirected("alice");
+        PersonDirected bob = new PersonDirected("bob");
+        PersonDirected carol = new PersonDirected("carol");
+        PersonDirected david = new PersonDirected("david");
+        PersonDirected emily = new PersonDirected("emily");
 
+        alice.follow(bob);
+        alice.follow(carol);
+
+        bob.follow(david);
+
+        carol.follow(emily);
+
+        david.follow(emily);
+
+        System.out.println(printArray(alice));
+        System.out.println(printArray(bob));
+        System.out.println(printArray(carol));
+        System.out.println(printArray(david));
+        System.out.println(printArray(emily));
+
+        System.out.println();
+        System.out.println();
+
+        System.out.println("david unfollow emily");
+        david.unfollow(emily);
+        System.out.println(printArray(david));
+
+        System.out.println();
+        System.out.println();
+        System.out.println("david follow bob");
+        david.follow(bob);
+        System.out.println(printArray(david));
+
+        System.out.println();
+        System.out.println();
+        System.out.println("emily follow alice");
+        emily.follow(alice);
+        System.out.println(printArray(emily));
     }
 
     private static String printArray(PersonUndirected personUndirected) {
@@ -35,6 +73,17 @@ public class Graph {
         int i = 0;
         for (PersonUndirected data : personUndirected.getFriends()) {
             System.out.print(i== personUndirected.getFriends().size()-1? data.getName():data.getName()+", ");
+            i++;
+        }
+        return output;
+    }
+
+    private static String printArray(PersonDirected personUndirected) {
+        String output = "";
+        System.out.print("list of "+ personUndirected.getName()+" friends is: ");
+        int i = 0;
+        for (PersonDirected data : personUndirected.getFollowers()) {
+            System.out.print(i== personUndirected.getFollowers().size()-1? data.getName():data.getName()+", ");
             i++;
         }
         return output;
