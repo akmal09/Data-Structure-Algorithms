@@ -9,6 +9,7 @@ import SortingAlgorithm.MergeSort;
 import SortingAlgorithm.QuickSort;
 import TreeDataStructure.BinaryTree;
 import TreeDataStructure.Graph.Graph;
+import TreeDataStructure.Graph.Node;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -199,8 +200,9 @@ public class Main {
 
 
     private static void graph(){
-        System.out.println("UNDIRECTED GRAPH:");
+
         Graph graph = new Graph();
+        System.out.println("UNDIRECTED GRAPH:");
         graph.runUndirectedGraph();
 
         System.out.println();
@@ -208,6 +210,20 @@ public class Main {
 
         System.out.println("DIRECTED GRAPH");
         graph.runDirectedGraph();
+
+        System.out.println();
+        System.out.println();
+        System.out.println("Depth First Search Traversal:");
+        graph.nodeInitiationAndChooseRoot();
+        Node choosedNode = graph.chooseNodeStarter("a");
+
+        graph.runDfs(choosedNode);
+        System.out.println();
+        System.out.println();
+
+        System.out.println("Breadth First Search Traversal:");
+        graph.runBfs(choosedNode);
+        System.out.println();
     }
     private static String printArray(int[] arr) {
         String output = "";

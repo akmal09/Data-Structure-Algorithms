@@ -1,10 +1,17 @@
 package TreeDataStructure.Graph;
 
-import java.util.List;
+import java.util.*;
 
 public class Graph {
 
     private List<Node> listNode;
+    private List<Node> adjencyList;
+
+    public Graph(){
+        this.listNode = new ArrayList<>();
+        this.adjencyList = new ArrayList<>();
+    }
+
     public void runUndirectedGraph(){
         PersonUndirected alice = new PersonUndirected("alice");
         PersonUndirected bob = new PersonUndirected("bob");
@@ -82,7 +89,7 @@ public class Graph {
         return output;
     }
 
-    public void nodeInitiationAndChooseRoot(String chooseRoot){
+    public void nodeInitiationAndChooseRoot(){
         Node a = new Node("A");
         Node b = new Node("B");
         Node c = new Node("C");
@@ -111,15 +118,34 @@ public class Graph {
 
     public Node chooseNodeStarter(String nodeValue){
         for(Node node : this.listNode){
-            if(nodeValue.equals(node.getValue())){
+            if(nodeValue.equalsIgnoreCase(node.getValue())){
                 return node;
             }
         }
         return null;
     }
 
-    public void runDfs(){
+    public void runDfs(Node root){
+        System.out.print(root.getValue()+" ");
+        for(Node node : root.getEdges()){
+            runDfs(node);
+        }
+    }
 
+    public void runBfs(Node node){
+
+        this.adjencyList.add(node);
+
+        while(!this.adjencyList.isEmpty()){
+            Node executedNode = this.adjencyList.get(0);
+            System.out.print(executedNode.getValue()+" ");
+            if(!executedNode.getEdges().isEmpty()){
+                for(Node child : executedNode.getEdges()){
+                    this.adjencyList.add(child);
+                }
+            }
+            this.adjencyList.remove(0);
+        }
     }
 
     private static String printArray(PersonDirected personUndirected) {
