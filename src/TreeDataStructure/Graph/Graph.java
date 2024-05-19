@@ -1,6 +1,10 @@
 package TreeDataStructure.Graph;
 
+import java.util.List;
+
 public class Graph {
+
+    private List<Node> listNode;
     public void runUndirectedGraph(){
         PersonUndirected alice = new PersonUndirected("alice");
         PersonUndirected bob = new PersonUndirected("bob");
@@ -76,6 +80,46 @@ public class Graph {
             i++;
         }
         return output;
+    }
+
+    public void nodeInitiationAndChooseRoot(String chooseRoot){
+        Node a = new Node("A");
+        Node b = new Node("B");
+        Node c = new Node("C");
+        Node d = new Node("D");
+        Node e = new Node("E");
+        Node f = new Node("F");
+        Node g = new Node("G");
+
+        a.addEdges(b);
+        a.addEdges(c);
+        a.addEdges(d);
+
+        b.addEdges(e);
+        b.addEdges(f);
+
+        e.addEdges(g);
+
+        this.listNode.add(a);
+        this.listNode.add(b);
+        this.listNode.add(c);
+        this.listNode.add(d);
+        this.listNode.add(e);
+        this.listNode.add(f);
+        this.listNode.add(g);
+    }
+
+    public Node chooseNodeStarter(String nodeValue){
+        for(Node node : this.listNode){
+            if(nodeValue.equals(node.getValue())){
+                return node;
+            }
+        }
+        return null;
+    }
+
+    public void runDfs(){
+
     }
 
     private static String printArray(PersonDirected personUndirected) {
