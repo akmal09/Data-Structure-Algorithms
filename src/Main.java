@@ -8,6 +8,8 @@ import SortingAlgorithm.InsertionSort;
 import SortingAlgorithm.MergeSort;
 import SortingAlgorithm.QuickSort;
 import TreeDataStructure.BinaryTree;
+import TreeDataStructure.Djikstra.Edge;
+import TreeDataStructure.Djikstra.GraphDijkstra;
 import TreeDataStructure.Graph.Graph;
 import TreeDataStructure.Graph.Node;
 
@@ -26,7 +28,8 @@ public class Main {
 //        quickSort();
 //        binarySearch();
 //        binaryTree();
-        graph();
+//        graph();
+        dijkstra();
     }
 
     public static void linkedList(){
@@ -225,6 +228,22 @@ public class Main {
         graph.runBfs(choosedNode);
         System.out.println();
     }
+
+    private static void dijkstra(){
+        GraphDijkstra graphDijkstra = new GraphDijkstra(5);
+        graphDijkstra.addEdge(0, 1, 2);
+        graphDijkstra.addEdge(0, 3, 1);
+        graphDijkstra.addEdge(1, 2, 3);
+        graphDijkstra.addEdge(1, 3, 2);
+        graphDijkstra.addEdge(1, 4, 4);
+        graphDijkstra.addEdge(2, 4, 5);
+        graphDijkstra.addEdge(3, 4, 3);
+
+//        graphDijkstra.printGraph();
+
+        System.out.println("tes");
+    }
+
     private static String printArray(int[] arr) {
         String output = "";
         for (int i=0; i<arr.length; i++) {
