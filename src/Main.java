@@ -240,6 +240,7 @@ public class Main {
         graphDijkstra.addEdge(3, 4, 3);
 
 //        graphDijkstra.printGraph();
+        graphDijkstra.dijkstra(0);
 
         System.out.println("tes");
     }
