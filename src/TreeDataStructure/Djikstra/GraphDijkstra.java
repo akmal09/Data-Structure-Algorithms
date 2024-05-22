@@ -66,25 +66,27 @@ public class GraphDijkstra {
 
         Arrays.fill(distance, Integer.MAX_VALUE);
         Arrays.fill(visited, false);
-        visited[startVertex] = true;
         distance[startVertex] = 0;
         priorityQueue.add(new Edge(startVertex, 0));
 
         while (!priorityQueue.isEmpty()){
             int currentVertex = priorityQueue.poll().destination;
-
-//            adjacencyList.add(new ArrayList<>());
-
             if(!visited[currentVertex]){
-                for(Edge vertice :adjacencyList.get(0)){
-                    int destination = vertice.destination;
-                    int weight = vertice.weight;
-                    if(!visited[destination] && distance[currentVertex]+weight < distance[destination]){
-                        distance[destination] = distance[currentVertex] + vertice.weight;
+                visited[currentVertex] = true;
+                for (Edge edge : adjacencyList.get(currentVertex)) {
+                    int curr = distance[currentVertex];
+                    int destination = edge.destination;
+                    int weight = edge.weight;
+                    int calculation = curr + weight;
+                    if (!visited[destination] && (calculation < distance[destination])) {
+                        distance[destination] = calculation;
+                        priorityQueue.add(new Edge(destination, distance[destination]));
                     }
                 }
             }
         }
+
+        printSolution(distance);
     }
 
     void printSolution(int[] distances) {
