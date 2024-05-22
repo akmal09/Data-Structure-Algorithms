@@ -1,4 +1,4 @@
-package TreeDataStructure.Djikstra;
+package TreeDataStructure.Dijkstra;
 
 import java.util.*;
 

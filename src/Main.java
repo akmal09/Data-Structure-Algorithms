@@ -8,8 +8,7 @@ import SortingAlgorithm.InsertionSort;
 import SortingAlgorithm.MergeSort;
 import SortingAlgorithm.QuickSort;
 import TreeDataStructure.BinaryTree;
-import TreeDataStructure.Djikstra.Edge;
-import TreeDataStructure.Djikstra.GraphDijkstra;
+import TreeDataStructure.Dijkstra.GraphDijkstra;
 import TreeDataStructure.Graph.Graph;
 import TreeDataStructure.Graph.Node;
 
