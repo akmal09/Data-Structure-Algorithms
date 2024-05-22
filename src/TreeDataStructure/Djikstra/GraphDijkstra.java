@@ -56,6 +56,13 @@ public class GraphDijkstra {
             }
         }
 
-//        printSolution(distances); // Print the shortest distances
+        printSolution(distances); // Print the shortest distances
+    }
+
+    void printSolution(int[] distances) {
+        System.out.println("Vertex \t Distance from Source");
+        for (int i = 0; i < vertices; i++) {
+            System.out.println(i + " \t\t " + distances[i]);
+        }
     }
 }

@@ -235,10 +235,9 @@ public class Main {
         graphDijkstra.addEdge(0, 3, 1);
         graphDijkstra.addEdge(1, 2, 3);
         graphDijkstra.addEdge(1, 3, 2);
-        graphDijkstra.addEdge(1, 4, 4);
+        graphDijkstra.addEdge(1, 4, 1);
         graphDijkstra.addEdge(2, 4, 5);
         graphDijkstra.addEdge(3, 4, 3);
-
 //        graphDijkstra.printGraph();
         graphDijkstra.dijkstra(0);
 
