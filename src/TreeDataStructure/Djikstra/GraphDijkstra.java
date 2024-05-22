@@ -59,6 +59,34 @@ public class GraphDijkstra {
         printSolution(distances); // Print the shortest distances
     }
 
+    public void dijkstraByMe(int startVertex){
+        int[] distance = new int[this.vertices];
+        boolean[] visited = new boolean[this.vertices];
+        PriorityQueue<Edge> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(edge -> edge.weight));
+
+        Arrays.fill(distance, Integer.MAX_VALUE);
+        Arrays.fill(visited, false);
+        visited[startVertex] = true;
+        distance[startVertex] = 0;
+        priorityQueue.add(new Edge(startVertex, 0));
+
+        while (!priorityQueue.isEmpty()){
+            int currentVertex = priorityQueue.poll().destination;
+
+//            adjacencyList.add(new ArrayList<>());
+
+            if(!visited[currentVertex]){
+                for(Edge vertice :adjacencyList.get(0)){
+                    int destination = vertice.destination;
+                    int weight = vertice.weight;
+                    if(!visited[destination] && distance[currentVertex]+weight < distance[destination]){
+                        distance[destination] = distance[currentVertex] + vertice.weight;
+                    }
+                }
+            }
+        }
+    }
+
     void printSolution(int[] distances) {
         System.out.println("Vertex \t Distance from Source");
         for (int i = 0; i < vertices; i++) {
