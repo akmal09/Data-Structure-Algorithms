@@ -57,4 +57,23 @@ public class BubbleSort {
         }
         return "["+array+"]";
     }
+
+    public void trySort(){
+        System.out.println("before sort"+printArray(arrayDefault));
+        boolean swap;
+        do {
+            swap = false;
+            for(int i=0; i<arrayDefault.length; i++){
+                if(i != arrayDefault.length-1){
+                    if(arrayDefault[i]>arrayDefault[i+1]){
+                        int temp = arrayDefault[i];
+                        arrayDefault[i] = arrayDefault[i+1];
+                        arrayDefault[i+1] = temp;
+                        swap = true;
+                    }
+                }
+            }
+        }while (swap);
+        System.out.println("after sort"+printArray(arrayDefault));
+    }
 }

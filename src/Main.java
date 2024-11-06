@@ -3,10 +3,7 @@ import DataStructure.LinkedList.RunALinkedList;
 import DataStructure.Queue.Queue;
 import DataStructure.Stack.Stack;
 import SearchAlgorithm.BinarySearch;
-import SortingAlgorithm.BubbleSort;
-import SortingAlgorithm.InsertionSort;
-import SortingAlgorithm.MergeSort;
-import SortingAlgorithm.QuickSort;
+import SortingAlgorithm.*;
 import TreeDataStructure.BinaryTree;
 import TreeDataStructure.Djikstra.Edge;
 import TreeDataStructure.Djikstra.GraphDijkstra;
@@ -18,10 +15,12 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
 //        linkedList();
 //        stack();
 //        queue();
 //        hashTable();
+        selectionSort();
 //        bubbleSort();
 //        insertionSort();
 //        mergeSort();
@@ -29,7 +28,7 @@ public class Main {
 //        binarySearch();
 //        binaryTree();
 //        graph();
-        dijkstra();
+//        dijkstra();
     }
 
     public static void linkedList(){
@@ -127,7 +126,8 @@ public class Main {
     public static void bubbleSort(){
         BubbleSort bubbleSort = new BubbleSort();
 //        bubbleSort.sortArrayAscending();
-        bubbleSort.sortArrayDescending();
+//        bubbleSort.sortArrayDescending();
+        bubbleSort.trySort();
     }
 
     public static void insertionSort(){
@@ -242,6 +242,11 @@ public class Main {
         graphDijkstra.dijkstra(0);
 
         System.out.println("tes");
+    }
+
+    private static void selectionSort(){
+        SelectionSort selectionSort = new SelectionSort();
+        selectionSort.start();
     }
 
     private static String printArray(int[] arr) {
