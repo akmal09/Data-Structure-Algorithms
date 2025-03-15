@@ -11,16 +11,29 @@ import TreeDataStructure.Graph.Graph;
 import TreeDataStructure.Graph.Node;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
+
+//        System.out.println(Double.valueOf(null));
+//        int[][] matrix = {
+//                {5, 7, 1},
+//                {4, 8, 2},
+//                {3, 9, 0}
+//        };
+//
+//        int[][] mod = reverseArray(matrix);
+//
+//        System.out.println(printArray(mod));
 
 //        linkedList();
 //        stack();
 //        queue();
 //        hashTable();
-        selectionSort();
+//        selectionSort();
 //        bubbleSort();
 //        insertionSort();
 //        mergeSort();
@@ -29,7 +42,15 @@ public class Main {
 //        binaryTree();
 //        graph();
 //        dijkstra();
+        LeetCodeHackerRank start = new LeetCodeHackerRank();
+        start.main();
+
     }
+
+
+
+
+
 
     public static void linkedList(){
         RunALinkedList runALinkedList = new RunALinkedList();
@@ -253,8 +274,39 @@ public class Main {
 //        graphDijkstra.printGraph();
 //        graphDijkstra.dijkstra(0);
 
+        System.out.println();
         graphDijkstra.dijkstraByMe(0);
         System.out.println("tes");
+    }
+
+    private static int[][] reverseArray(int[][] matrix){
+        int row = matrix[0].length;
+        int column = matrix.length;
+        int[][] revArr = new int[row][column];
+
+
+        int rowNew = 0;
+        for(int i=0; i<matrix[0].length; i++){
+            int colNew = 0;
+            for(int j=matrix.length-1; j>-1; j--){
+                revArr[rowNew][colNew] = matrix[j][i];
+                colNew++;
+            }
+            rowNew++;
+        }
+
+        return revArr;
+    }
+
+    private static String printArray(int[][] arr) {
+        String output="";
+        for (int i=0; i<arr.length; i++) {
+            for(int j=0; j<arr[i].length; j++){
+                output = output+Integer.toString(arr[i][j])+" ";
+            }
+            output = output + "\n";
+        }
+        return output;
     }
 
     private static void selectionSort(){
