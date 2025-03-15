@@ -1,4 +1,4 @@
-package TreeDataStructure.Djikstra;
+package TreeDataStructure.Dijkstra;
 
 public class Edge {
     public int destination;
