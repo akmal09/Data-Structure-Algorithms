@@ -44,13 +44,7 @@ public class Main {
 //        dijkstra();
         LeetCodeHackerRank start = new LeetCodeHackerRank();
         start.main();
-
     }
-
-
-
-
-
 
     public static void linkedList(){
         RunALinkedList runALinkedList = new RunALinkedList();
