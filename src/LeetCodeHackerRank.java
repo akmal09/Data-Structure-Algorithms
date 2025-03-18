@@ -1,12 +1,68 @@
+import java.util.*;
+
 public class LeetCodeHackerRank {
 
     public void main(){
         //        List<Integer> p = new ArrayList<>();
 //        int[] array = {1};
-        int[] array2 = {1,2,3,4,4,9,56,90};
+        int[] array2 = {2,-3,0,-2,-5,-5,-4,1,2,-2,2,0,2,-4,5,5,-10};
 //        System.out.println(printArray(intersection(array, array2)));
 
-        twoSum(array2, 8);
+//        twoSum(array2, 8);
+
+        System.out.println(threeSum(array2));
+    }
+
+    public List<List<Integer>> threeSum(int[] nums) {
+        int p1 = 0;
+        int l = p1 + 1;
+        int r = nums.length -1;
+
+        Arrays.sort(nums);
+
+        List<List<Integer>> returnedValue = new ArrayList<>();
+        if(nums.length == 1 || nums.length == 2){
+            if(r+1 == 1){
+                if(nums[p1] == 0){
+                    returnedValue.add(Arrays.asList(nums[p1]));
+                }
+
+                return returnedValue;
+            }else{
+                if(nums[p1] + nums[p1+1] == 0){
+                    returnedValue.add(Arrays.asList(nums[p1]));
+                }
+                return returnedValue;
+            }
+        }
+
+        Set<Integer> hasBeenThroughit = new HashSet<>();
+
+        while(l<r){
+            if(hasBeenThroughit.add(nums[p1])){
+                while(l<r){
+                    int total = nums[p1]+nums[l]+nums[r];
+                    if(total == 0){
+                        returnedValue.add(Arrays.asList(nums[p1],nums[l],nums[r]));
+                        r--;
+                        l++;
+                        while(nums[r] == nums[r+1] && nums[l] == nums[l-1] && l<r){
+                            r--;
+                            l++;
+                        }
+                    }else if(total > 0){
+                        r--;
+                    }else{
+                        l++;
+                    }
+
+                }
+            }
+            p1++;
+            l = p1 + 1;
+            r = nums.length -1;
+        }
+        return returnedValue;
     }
 
     private int[] twoSum(int[] numbers, int target) {
@@ -72,5 +128,13 @@ public class LeetCodeHackerRank {
         newNumber[0] = 1;
 
         return newNumber;
+    }
+
+    private static String printArray(int[] arr) {
+        String output = "";
+        for (int i=0; i<arr.length; i++) {
+            output = output+" "+Integer.toString(arr[i]);
+        }
+        return output;
     }
 }
