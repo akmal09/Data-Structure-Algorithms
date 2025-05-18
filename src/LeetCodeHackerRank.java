@@ -5,41 +5,41 @@ public class LeetCodeHackerRank {
     public void main(){
         //        List<Integer> p = new ArrayList<>();
 //        int[] array = {1};
-        int[] array2 = {8860,-853,6534,4477,-4589,8646,-6155,-5577,-1656,-5779,-2619,-8604,-1358,-8009,4983,7063,3104,-1560,4080,2763,5616,-2375,2848,1394,-7173,-5225,-8244,-809,8025,-4072,-4391,-9579,1407,6700,2421,-6685,5481,-1732,-8892,-6645,3077,3287,-4149,8701,-4393,-9070,-1777,2237,-3253,-506,-4931,-7366,-8132,5406,-6300,-275,-1908,67,3569,1433,-7262,-437,8303,4498,-379,3054,-6285,4203,6908,4433,3077,2288,9733,-8067,3007,9725,9669,1362,-2561,-4225,5442,-9006,-429,160,-9234,-4444,3586,-5711,-9506,-79,-4418,-4348,-5891};
+        int[] array2 = {1,12,-5,-6,50,3};
 //        System.out.println(printArray(intersection(array, array2)));
 
 //        twoSum(array2, 8);
 
-        System.out.println(findMaxAverage(array2, 93));
+        System.out.println(findMaxAverage(array2, 4));
     }
 
     public double findMaxAverage(int[] nums, int k) {
         if(nums.length == 1) return nums[0];
         int leftEdge = 0;
-        int rightEdge = k;
+        int rightEdge = k-1;
 
-        double average = 0;
-        double returnedAverage = Double.MIN_VALUE;
-        while(rightEdge < nums.length+1){
-            double total=0;
-            for(int i=leftEdge; i<rightEdge; i++){
-                total += nums[i];
-            }
+        double returnedTotal = Double.MIN_VALUE;
+        int totalOperation=0;
 
-            average = total/k;
-
-            if(rightEdge == k){
-                returnedAverage = average;
+        while(rightEdge<nums.length){
+            if(leftEdge == 0){
+                int i=leftEdge;
+                while(i<k){
+                    totalOperation += nums[i];
+                    i++;
+                }
+                returnedTotal = totalOperation;
             }else{
-                returnedAverage = average > returnedAverage?average:returnedAverage;
-
+                totalOperation = totalOperation - nums[leftEdge-1] + nums[rightEdge];
+                if(returnedTotal < totalOperation){
+                    returnedTotal = totalOperation;
+                }
             }
-
             leftEdge++;
             rightEdge++;
         }
 
-        return returnedAverage;
+        return returnedTotal / k;
     }
 
     public List<List<Integer>> threeSum(int[] nums) {

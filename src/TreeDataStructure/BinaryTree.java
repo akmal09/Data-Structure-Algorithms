@@ -4,6 +4,7 @@ import SearchAlgorithm.BinarySearch;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class BinaryTree {
     public TreeNode root;
@@ -75,4 +76,78 @@ public class BinaryTree {
             System.out.print(Integer.toString(treeNode.val)+" ");
         }
     }
+
+    public TreeNode deleteNode(int deletedVal,TreeNode treeNode){
+        if(deletedVal > treeNode.val){
+            treeNode.setRight(deleteNode(deletedVal, treeNode.getRight()));
+        }else if(deletedVal < treeNode.val){
+            treeNode.setLeft(deleteNode(deletedVal, treeNode.getLeft()));
+        }else{
+            return processDelete(deletedVal, treeNode);
+        }
+        return treeNode;
+    }
+
+    private TreeNode processDelete(int deletedVal, TreeNode nodeWillDelete){
+        if(nodeWillDelete.getLeft() == null && nodeWillDelete.getRight() == null) return null;
+
+        if(nodeWillDelete.getLeft() == null){
+            return nodeWillDelete.getRight();
+        }
+        if(nodeWillDelete.getRight() == null){
+            return nodeWillDelete.getLeft();
+        }
+        TreeNode leftDeepNode = findDeepLeft(nodeWillDelete.getRight());
+
+        nodeWillDelete.setVal(leftDeepNode.val);
+        nodeWillDelete.setRight(deleteNode(leftDeepNode.val, nodeWillDelete.getRight()));
+
+        return nodeWillDelete;
+    }
+
+    private TreeNode findDeepLeft(TreeNode node){
+        if(node.getLeft() == null) return node;
+        return findDeepLeft(node.getLeft());
+    }
+    
+    public TreeNode deleteNodeGpt(int deletedVal, TreeNode treeNode){
+        if (treeNode == null) return null;
+
+        if (deletedVal > treeNode.val) {
+            treeNode.setRight(deleteNodeGpt(deletedVal, treeNode.getRight()));
+        } else if (deletedVal < treeNode.val) {
+            treeNode.setLeft(deleteNodeGpt(deletedVal, treeNode.getLeft()));
+        } else {
+            // Found the node to delete
+            return processDeleteGpt(deletedVal, treeNode, null, null);
+        }
+        return treeNode;
+    }
+
+    private TreeNode processDeleteGpt(int deletedVal, TreeNode nodeWillDelete, TreeNode parentDeletedTree, String whichChild) {
+        // Case 1: No child
+        if (nodeWillDelete.getLeft() == null && nodeWillDelete.getRight() == null) {
+            return null;
+        }
+        // Case 2: One child
+        if (nodeWillDelete.getLeft() == null) {
+            return nodeWillDelete.getRight();
+        } else if (nodeWillDelete.getRight() == null) {
+            return nodeWillDelete.getLeft();
+        }
+        // Case 3: Two children
+        // Replace with smallest value in right subtree
+        TreeNode minNode = findMin(nodeWillDelete.getRight());
+        nodeWillDelete.setVal(minNode.getVal());
+        nodeWillDelete.setRight(deleteNodeGpt(minNode.getVal(), nodeWillDelete.getRight()));
+        return nodeWillDelete;
+    }
+
+    private TreeNode findMin(TreeNode node) {
+        while (node.getLeft() != null) {
+            node = node.getLeft();
+        }
+        return node;
+    }
+
 }

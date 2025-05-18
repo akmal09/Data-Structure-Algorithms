@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Set;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
 
 //        System.out.println(Double.valueOf(null));
 //        int[][] matrix = {
@@ -38,11 +38,11 @@ public class Main {
 //        mergeSort();
 //        quickSort();
 //        binarySearch();
-//        binaryTree();
+       binaryTree();
 //        graph();
 //        dijkstra();
-        LeetCodeHackerRank start = new LeetCodeHackerRank();
-        start.main();
+        // LeetCodeHackerRank start = new LeetCodeHackerRank();
+        // start.main();
     }
 
     public static void linkedList(){
@@ -193,14 +193,17 @@ public class Main {
         return output;
     }
 
-    private static void binaryTree(){
-        BinaryTree binaryTree = new BinaryTree(17);
-        binaryTree.insertTree(10, binaryTree.root);
-        binaryTree.insertTree(7, binaryTree.root);
-        binaryTree.insertTree(12, binaryTree.root);
-        binaryTree.insertTree(59, binaryTree.root);
-        binaryTree.insertTree(34, binaryTree.root);
+    private static void binaryTree()throws Exception{
+        BinaryTree binaryTree = new BinaryTree(64);
+        binaryTree.insertTree(51, binaryTree.root);
+        binaryTree.insertTree(89, binaryTree.root);
+        binaryTree.insertTree(20, binaryTree.root);
+        binaryTree.insertTree(62, binaryTree.root);
+        binaryTree.insertTree(63, binaryTree.root);
+        binaryTree.insertTree(58, binaryTree.root);
+        binaryTree.insertTree(77, binaryTree.root);
         binaryTree.insertTree(92, binaryTree.root);
+        binaryTree.insertTree(95, binaryTree.root);
 
         System.out.print("inorder traversal ->[");
         binaryTree.inorderTraversalTree(binaryTree.root);
@@ -212,6 +215,14 @@ public class Main {
 
         System.out.print("postorder traversal ->[");
         binaryTree.postOrder(binaryTree.root);
+        System.out.println("]");
+
+        System.out.println();
+
+        // binaryTree.root = binaryTree.deleteNodeGpt(51, binaryTree.root);
+        binaryTree.root = binaryTree.deleteNode(51, binaryTree.root);
+        System.out.print("inorder traversal after delete ->[");
+        binaryTree.inorderTraversalTree(binaryTree.root);
         System.out.println("]");
     }
 
