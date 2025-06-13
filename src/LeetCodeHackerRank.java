@@ -5,12 +5,63 @@ public class LeetCodeHackerRank {
     public void main(){
         //        List<Integer> p = new ArrayList<>();
 //        int[] array = {1};
-        int[] array2 = {1,12,-5,-6,50,3};
+        // int[] array2 = {1,12,-5,-6,50,3};
 //        System.out.println(printArray(intersection(array, array2)));
 
 //        twoSum(array2, 8);
 
-        System.out.println(findMaxAverage(array2, 4));
+        // System.out.println(findMaxAverage(array2, 4));
+
+        ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
+        // System.out.println("Printing lists before merging:");
+        // System.out.println("list1: " + list1.printList());
+        // System.out.println("list2: " + list2.printList());
+        System.out.println();
+        System.out.println();
+        ListNode mergedList = swapPairs(list1);
+        System.out.println(mergedList.printList());
+    }
+
+    public ListNode swapPairs(ListNode head) {
+        if(head == null) return head;
+        if(head.next != null){
+            System.out.println(head.printList());
+            if(head.next.next != null){
+                head.next.next = swapPairs(head.next.next);
+                int temp = head.val;
+                head.val = head.next.val;
+                head.next.val = temp;
+                return head;
+            }else{
+                ListNode temp = head;
+                ListNode tempNextNode = head.next.next;
+                head = head.next;
+                head.next = temp;
+                head.next.next = tempNextNode;
+                System.out.println(head.printList());
+                return head;
+            }
+        }
+        return head;
+    }
+
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        if(list1 == null) return list2;
+        if(list2 == null) return list1;
+
+        if(list1.val < list2.val){
+            System.out.print("(" + list1.next.printList() + ",");
+            System.out.println(" " + list2.printList() + ")");
+            list1.next = mergeTwoLists(list1.next, list2);
+            return list1;
+        }else{
+            String param1 = Objects.isNull(list1) ? "null" : list1.printList();
+            String param2 = Objects.isNull(list2.next) ? "null" : list2.next.printList();
+            System.out.print("(" + param1 + ",");
+            System.out.println(" " + param2+ ")");
+            list2.next = mergeTwoLists(list1, list2.next);  
+            return list2;
+        }
     }
 
     public double findMaxAverage(int[] nums, int k) {

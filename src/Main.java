@@ -38,11 +38,11 @@ public class Main {
 //        mergeSort();
 //        quickSort();
 //        binarySearch();
-       binaryTree();
+    //    binaryTree();
 //        graph();
 //        dijkstra();
-        // LeetCodeHackerRank start = new LeetCodeHackerRank();
-        // start.main();
+        LeetCodeHackerRank start = new LeetCodeHackerRank();
+        start.main();
     }
 
     public static void linkedList(){
