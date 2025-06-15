@@ -1,5 +1,8 @@
 import java.util.*;
 
+import DataStructure.TreeNode;
+import DataStructure.LinkedList.ListNode;
+
 public class LeetCodeHackerRank {
 
     public void main(){
@@ -12,14 +15,89 @@ public class LeetCodeHackerRank {
 
         // System.out.println(findMaxAverage(array2, 4));
 
-        ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
-        // System.out.println("Printing lists before merging:");
-        // System.out.println("list1: " + list1.printList());
-        // System.out.println("list2: " + list2.printList());
-        System.out.println();
-        System.out.println();
-        ListNode mergedList = swapPairs(list1);
-        System.out.println(mergedList.printList());
+        // ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
+        // System.out.println();
+        // System.out.println();
+        // ListNode mergedList = swapPairs(list1);
+        // System.out.println(mergedList.printList());
+        TreeNode root = new TreeNode(50);
+        root.insert(root, 30);
+        root.insert(root, 70);
+        root.insert(root, 20);
+        root.insert(root, 40);
+        root.insert(root, 60);
+        root.insert(root, 80);
+
+        TreeNode deleteNode = processDeletePredecessor(root);
+
+        deleteNode.print();
+
+    }
+
+
+    private TreeNode processDeletePredecessor(TreeNode root) {
+        return deleteNode(root, 50);
+    }
+
+    
+    public TreeNode deleteNode(TreeNode node, int val) {
+        if(node== null){
+            return node;
+        }
+
+        if(node.getVal() == val){
+            TreeNode deepNode = findDeepestNode(node, val);
+
+            // TreeNode tempNode = node;
+            node.setLeft(removeDeepNode(node.getLeft(), deepNode.getVal()));
+            node.setVal(deepNode.getVal());
+            return node;
+        }else{
+            if(val > node.getVal()){
+                node.setRight(deleteNode(node.getRight(), val));
+            }else{
+                node.setLeft(deleteNode(node.getLeft(), val));
+            }
+        }
+
+        return node;
+        
+    }
+
+    private TreeNode removeDeepNode(TreeNode node, int val){
+
+        if(node == null){
+            return node;
+        }
+        if(node.getVal() == val){
+            return null;
+        }else{
+            if(node.getRight() != null){
+                node.setRight(removeDeepNode(node.getRight(), val));
+            }
+
+            if(node.getLeft() != null){
+                node.setLeft(removeDeepNode(node.getLeft(), val));
+            }
+        }
+        return node;
+    }
+
+    private TreeNode findDeepestNode(TreeNode node, int val){
+
+        if(node == null){
+            return null;
+        }
+
+        if(node.getLeft() == null && node.getRight() == null){
+            return node;
+        }else{
+            if(node.getLeft() != null){
+                return findDeepestNode(node.getLeft(), val);
+            }else{
+                return findDeepestNode(node.getRight(), val);
+            }
+        }
     }
 
     public ListNode swapPairs(ListNode head) {

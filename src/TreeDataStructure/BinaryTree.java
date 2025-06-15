@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import DataStructure.TreeNode;
+
 public class BinaryTree {
     public TreeNode root;
 
